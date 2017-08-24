@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "react": "^15.6.1",
+    "react-apollo": "^1.4.14",
     "react-d3-radar": "^0.2.6",
     "react-dom": "^15.6.1",
     "react-radio-group": "^3.0.2",

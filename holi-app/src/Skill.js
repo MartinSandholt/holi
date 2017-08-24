@@ -5,25 +5,36 @@ class Skill extends Component {
     constructor(props) {
         super(props);
         this.props = props;
+        console.log(props);
     }
 
     render() {
+        const { title } = this.props;
         return (
             <div>
-                <h2>{this.props.title}</h2>
-                <RadioGroup name="fruit" onChange={this.handleChange}>
-                    <Radio value="first" />First level
-                    <Radio value="second" />Second level
-                    <Radio value="third" />Third level
-                    <Radio value="four" />Fourth level
-                    <Radio value="five" />Fifth level
-                </RadioGroup>
+                <h2>{title}</h2>
+                {this.renderSkills()}
             </div>
         );
     }
 
     handleChange(_) {
         console.log(_);
+    }
+
+    renderSkills() {
+        return this.props.skills.map(s => {
+            return (<div key={s.id}>
+                <h3>{s.name}</h3>
+                <RadioGroup name={s.name} onChange={this.handleChange}>
+                    <Radio value="1" />{s.level1}
+                    <Radio value="2" />{s.level2}
+                    <Radio value="3" />{s.level3}
+                    <Radio value="4" />{s.level4}
+                    <Radio value="5" />{s.level5}
+                </RadioGroup>
+            </div>);
+        });
     }
 }
 

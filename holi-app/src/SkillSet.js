@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './SkillSet.css';
 import Skill from './Skill';
+import { gql, graphql } from 'react-apollo';
 
 class SkillSet extends Component {
     constructor(props) {
@@ -17,12 +18,16 @@ class SkillSet extends Component {
     }
 
     getCategories() {
-        return this.props.categories.map((s, i) => {
-            return <li key={s.key}>
-                <Skill title={s.label} skills={this.props.skills} />
+        const { data } = this.props;
+        console.log(data);
+        return data.allCategories ? data.allCategories.map((s, i) => {
+            return <li key={s.id}>
+                <Skill title={s.name} skills={s.skills} />
             </li>
-        });
+        }) : null;
     }
 }
 
-export default SkillSet;
+const query = gql`query Categories { allCategories { id name skills { id name description level1 level2 level3 level4 level5 } } }`
+
+export default graphql(query)(SkillSet);
