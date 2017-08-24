@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Chart from './Chart';
+import SkillSet from './SkillSet';
 
 class App extends Component {
   render() {
@@ -19,6 +20,7 @@ class App extends Component {
           userSkills={this.getUserSkills()}
           maxSkillLevel="10"
           width="500" height="500" padding="70"/>
+        <SkillSet categories={this.getSkillSet()} skills={this.getUserSkills()}/>
       </div>
     );
   }
