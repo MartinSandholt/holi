@@ -1,5 +1,30 @@
+@font-face {
+  font-family: 'Avenir-regular';
+  src: url('./assets/avenir-next-regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Avenir-bold';
+  src: url('./assets/avenir-next-bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Fira-regular';
+  src: url('./assets/FiraCode-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Fira-bold';
+  src: url('./assets/FiraCode-Bold.woff') format('woff');
+}
+
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: 'Avenir-regular', sans-serif;
+  background-color: hsla(0, 0%, 96%, 1);
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Avenir-bold', sans-serif;
 }

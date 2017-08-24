@@ -1,0 +1,43 @@
+.personal-info {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
+
+.personal-info img {
+    width: 100%;
+    max-width: 180px;
+    height: 100%;
+    max-height: 180px;
+    border-radius: 50%;
+    margin-right: 16px;
+}
+
+.personal-info .info-list {
+    font-family: fira-bold;
+}
+
+.personal-info .info-list .info-item {
+    padding-bottom: 0px;
+    font-size: 20px;
+}
+
+.personal-info .info-list .info-item span {
+    padding-right: 8px;
+    font-family: fira-regular;
+    font-size: 14px;
+    color: #595959;
+}
+
+.personal-info .info-list .primary {
+    font-size: 30px;
+    font-family: avenir-bold;
+    color: #0D0D0D;
+}
+
+.personal-info .info-list .secondary {
+    font-size: 14px;
+}
